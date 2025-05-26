@@ -1,0 +1,232 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Utility  Class */
+.heading-class {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    text-align: center;
+    text-wrap: wrap;
+    justify-content: center;
+    color: #00bbe0;
+    letter-spacing: 1px;
+    font-size: 23px;
+    line-height: 43px;
+    text-shadow: 1.5px 1.5px 1.5px rgb(25, 0, 255);
+}
+
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #cee3f5;
+    background-color: aliceblue;
+    align-items: center;
+}
+
+.intro-heading {
+    width: 48vw;
+    padding: 2px 60px;
+
+}
+
+.intro-heading p {
+    text-align: center;
+    line-height: 25px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.intro-heading p span {
+    font-weight: bold;
+}
+
+
+.intro-img {
+    position: relative;
+}
+
+.intro-img img {
+    width: 48vw;
+    height: 250px;
+    display: inline-block;
+    /* border: 2px solid red; */
+    border-radius: 12px;
+
+
+}
+
+.intro-overlay {
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    opacity: 0;
+    transition: 1s;
+    cursor: pointer;
+    /* Styling of text on overlay */
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(rgba(0, 0, 0, 0), #009688);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 23px;
+}
+
+/* This is to display color on intro image on HOVER */
+.intro-img:hover .intro-overlay {
+    opacity: 1;
+
+}
+
+.intro-overlay span {
+    display: none;
+
+}
+
+.intro-img:hover .intro-overlay span {
+    display: block;
+    opacity: 1;
+
+}
+
+
+
+
+
+/* Features Section Styling Starts here */
+#features {
+    padding-bottom: 24px;
+}
+
+.main-heading {
+    text-align: center;
+    color: #00bbe0;
+    text-shadow: 5px 5px 4px rgb(92, 83, 168);
+    padding: 21px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 39px;
+}
+
+
+.feature-container {
+    margin: 12px 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Styling of image of tree */
+#tree-img {
+    width: 600px;
+    height: 430px;
+    border-radius: 12px;
+    margin: 2px auto;
+}
+
+#tree-img:hover {
+    /* opacity: 0.8; */
+
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 0px 30px 2px rgb(36, 34, 34);
+
+
+}
+
+/* Styling of Paragraphs */
+.para-container {
+    padding: 9px 43px;
+}
+
+.para-container h2,
+.feature-para {
+    text-align: center;
+
+}
+
+.feature-para {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+}
+
+.feature {
+    padding: 8px 0;
+}
+
+
+
+/* Styling of Sponsors Section Here */
+
+#sponsors {
+    width: 100%;
+    margin-bottom: 54px;
+
+}
+
+.sponsor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    flex-wrap: wrap;    
+}
+
+.sponsor-item:hover {
+    transform: translateY(-12px);    
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.sponsor-item {
+
+
+    flex-basis: 20%;
+    background-color: white;
+    width: 300px;
+    height: 410px;
+    border-radius: 9px;
+    margin: 8px 23px;
+    transition: all 0.2s ease-out; 
+    box-shadow: 0px 0px 12px 1px rgb(0, 0, 0);
+}
+
+/* Styling of images in sponosr section  */
+.sponsor-item img {
+    width: 150px;
+    margin: 32px auto;
+    margin-bottom: 20;
+    display: flex;
+}
+
+#youtube-img {
+    height: 110px;
+    margin-top: 43px;
+}
+
+#window-img {
+
+    margin-top: 25px;
+}
+
+#whatsapp-img {
+    margin-bottom: 10px;
+    margin-top: 15px;
+
+}
+
+
+/* Styling of Para in sponosr section  */
+.image-para {
+    text-align: center;
+    padding: 9px 19px;
+}
+
+.readmore {
+    color: blue;
+    display: block;
+    padding: 6px 0;
+
+}

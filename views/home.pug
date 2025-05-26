@@ -1,0 +1,193 @@
+extends base.pug
+block title 
+    title Home | IT_HUB soft ware solutions
+block style 
+    style   
+        include ../static/base.css
+        include ../static/home.css
+
+
+block content 
+    <!-- This for Intro  Section -->
+    <div class="home-container">
+        <section id="intro">
+            <div class="intro-container">
+
+                <div class="intro-img">
+
+                    <img src="/static/img/intro.jpg"  alt="Error loading Image">
+
+                    <div class="intro-overlay">
+                        <h1>Welcome</h1>
+                        <span>
+                            <small>to</small>
+                            <h3>IT_HUB</h3>
+                        </span>
+                    </div>
+                    
+                </div>
+
+                <div class="intro-heading">
+                    <h1 class="heading-class">IT Hub</h1>
+                    <p><span>Hello!</span> Welcome to our website. What you want from us. We provide world's best services in IT field. We provide <span>AI Solution</span> ,<span>Web Services</span>, <span>App Development</span> and much more!!</p>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <hr>
+
+
+    <!-- This for  WHY US Section -->
+    <section id="features">
+        <h1 class="main-heading">Why Us ?</h1>
+        
+        <div class="feature-container">
+            
+            <div class="para-container">
+                
+                <div class="feature">
+
+                    <h2 class="heading-class">Lot of Sponsors</h2>
+                    <p class="feature-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis consequuntur beatae earum excepturi omnis officia. Rem debitis consectetur vero impedit beatae tempora culpa? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos eligendi aliquam omnis quod et.unde excepturi aut est laborum alias.</p>
+                </div>
+                <div class="feature">
+
+                    <h2 class="heading-class">Lot of Users</h2>
+                    <p class="feature-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis consequuntur beatae earum excepturi omnis officia. Rem debitis consectetur vero impedit beatae tempora culpa? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos eligendi quod et, quaerat id nesciunt soluta a nemo suscipit animi earum iure magni nam eaque corrupti vero minima unde excepturi aut est laborum alias.This is thte reason </p>
+                </div>
+                <div class="feature">
+
+                    <h2 class="heading-class">Trusted Investors</h2>
+                    <p class="feature-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis consequuntur beatae earum excepturi omnis officia. Rem debitis consectetur vero impedit beatae tempora culpa? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos eligendi aliquam omnis quod et nesciunt soluta a nemo suscipit animi earum iure magni nam eaque corrupti vero minima unde.</p>
+                </div>
+                    
+
+            </div>
+
+            <img id="tree-img" src="../static/img/social-tree.jpg" alt="We are connectd to many top level companies">
+
+            
+        </div>
+
+
+    </section>
+    <hr>
+    
+
+
+    <!-- This for Sponsors Section-->
+    <section id="sponsors">
+        <h1 class="main-heading">Sponsors</h1>  
+
+        <div class="sponsor-container">
+            
+            <div class="sponsor-item">
+                <img src="../static/img/whatsapp.jpg" alt="whatsapp" id="whatsapp-img">
+                <h1 class="heading-class">Whatsapp</h1>
+                <p class="image-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus qui ullam? Lorem consectetur adipisicing elit. Ex architecto maiores iste. In similique nemo sit voluptatem placeat deserunt, a esse nobis? Lorem ipsum dolor sit amet, adipisicing.<a href="/about"  class="readmore">Readmore</a></p>    
+            </div>
+
+            <div class="sponsor-item">
+                <img src="../static/img/window.png" alt="microsoft" id="window-img">
+                <h1 class="heading-class">Microsoft</h1>
+                <p class="image-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui ullam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex architecto maiores iste. In similique nemo sit voluptatem placeat deserunt, a esse nobis? Lorem ipsum dolor sit amet.<a href="/about"  class="readmore">Readmore</a></p>
+            </div>
+
+            <div class="sponsor-item">
+                <img src="../static/img/twitter3.png" alt="twitter">
+                <h1 class="heading-class">Twitter</h1>
+                <p class="image-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus qui ullam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex architecto maiores iste. In similique nemo sit  a esse nobis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. <a href="/about"  class="readmore">Readmore</a></p>
+            </div>
+
+            <div class="sponsor-item">
+                <img src="../static/img/youtube.png" alt="youtube" id="youtube-img">
+                <h1 class="heading-class">Youtube</h1>        
+                <p class="image-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus qui ullam?  sit amet consectetur adipisicing elit. Ex architecto maiores iste. In similique nemo sit voluptatem placeat deserunt, a esse nobis.dolor sit amet consectetur, adipisicing elit.<a href="/about" class="readmore">Readmore</a></p>
+            </div>
+
+        </div>
+        
+    </section>
+    //- <hr>
+
+
+
+
+    
+
+    <footer class="navclr-footclr">
+
+        <div class="up-footer">
+
+            <div class="heading" id="heading-1">
+                <h1 id="footer-heading-1">WALL STREET JOURNAL |</h1>
+                <h1 id="footer-heading-2">TECH CRUNCH |</h1>
+                <h1 id="footer-heading-3">ENTEREPRENER</h1>
+            </div>
+
+            <div class="heading" id="heading-2">
+                <h1 id="footer-heading-4">THE NEW YORK TIME |</h1>
+                <h1 id="footer-heading-5">FORBES</h1>
+            </div>
+
+        </div>
+
+        <hr>
+        <div class="down-footer">
+
+            <div id="f-one" class="footer-para">
+                <b>Cmpany</b>
+                <p>Contact</p>
+                <p>Career</p>
+                <p>Team</p> <!-- <== I wanna do this  -->
+                <p>Press release</p>
+                <p>In the media</p>
+                <!-- <p>Testimonials</p> -->
+                <p>IT-Hub non profit</p>
+            </div>
+
+            <div id="f-two" class="footer-para">
+                <b>Design services</b>
+                <p>Design contests</p>
+                <p>1-to-1 Projects</p>
+                <p>Find a designer</p>
+                <p>Dicover inspiration</p>
+                <p>Pricing</p>
+                <p>IT-Hub Design studio</p>
+                <p>IT-Hub Pro</p>
+            </div>
+
+            <div id="f-three" class="footer-para">
+                <b>Get a design</b>
+                <p>Logo design</p>
+                <p>Business card</p>
+                <p>Web page design</p>
+                <p>Brand guide</p>
+                <p>Packaging design</p>
+                <p>T-shirt design</p>
+                <p>Book cover design</p>
+                <p>Browse all categories</p>
+            </div>
+
+            <div id="f-four" class="footer-para">
+                <b>Resources</b>
+                <p>Become a designer</p>
+                <p>Blog</p>
+                <p>Design without borders</p>
+                <p>IT-Hub awards</p>
+                <p>Affiliates</p>
+                <p>Logo design</p>
+                <p>T-shirt design</p>
+                <p>Designer resources</p>
+                <p>Featured partners</p>
+                <p>Help</p>
+            </div>
+
+        </div>
+        <hr>
+        <p class="copy-right"> Copyright &copy; 2005-2024 | www.ITHub.edu.pk | All rights reserved </p>    
+    </footer>
+    
+
+

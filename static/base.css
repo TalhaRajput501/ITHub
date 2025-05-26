@@ -1,0 +1,270 @@
+ 
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+/* Utility class */
+.navclr-footclr {
+  background-color: rgb(0 187 224);
+}
+
+/* Styling of NAVIGATION BAR */
+#navigation {
+  /* font-size: 2rem; */
+  height: 4.5rem;
+  align-items: center;
+  display: flex; 
+  justify-content: space-between;
+}
+
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar li ,.order_button{
+  list-style: none;
+  /* font-family: cursive; */
+  font-family: monospace;
+  font-size: 1.4rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+.nav-logo {
+  border-radius: 50%;
+  width: 50px;
+  padding: 2px 4px;
+  cursor: pointer;
+  margin: auto 8px;
+
+}
+
+.navbar li a ,.order_button {
+  padding: 1px 14px;
+  margin: 21px 4px;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 12px;
+
+}
+
+.navbar li a:hover{
+  background-color: rgb(255, 255, 255); 
+  color: rgb(0 187 224);
+  border-radius: 12px;
+}
+
+.order{
+  list-style: none;
+}
+
+
+.order_button{
+  right: 6rem;
+  color: white;
+  background: linear-gradient(135deg, #008394, #047a83);
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: transform 0.2s ease-in;
+  border-radius: 4px;
+  padding: 5px 12px;
+}
+
+.order_button:hover{
+  color: white;
+  transform: scale(1.04);
+  background: linear-gradient(135deg, #00bcd4, #008394);
+}
+
+/* Styling of menu bar of service  */
+
+#service-button {
+  background-color: #00bbe0; 
+
+  outline: none;
+  border: none;
+}
+
+/* #service-button:hover + #menu {
+  display: block;
+} */
+
+#menu {
+  z-index: 2;
+  position: absolute;
+  padding: 12px 22px;
+  top: 4.5rem;
+  left: 87px;
+  border-radius: 12px;
+  background-color: aliceblue;
+  box-shadow: 0 0 25px 7px grey; 
+  display: none;
+
+
+}
+
+#menu ul li {
+  list-style: none;
+  margin: 17px 0;
+}
+
+
+#menu ul li a:hover{
+  color: rgb(3, 118, 141);
+  
+
+}
+
+#menu ul li a {
+  padding: 3px;
+  text-decoration: none;
+  color: rgb(0, 187, 224);
+  font-size: 1.2em;
+  display: block;
+
+}
+
+
+/* Footer Styling starts Here */
+footer {
+  color: white;
+  box-shadow: 0px -15px 59px 0px #2230cc;
+  /* box-shadow: 0px 30px 80px  blue; */
+
+  padding: 11px 0;
+}
+
+/* Heading footer Starts Here */
+.up-footer {
+  /* color: red; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.heading {
+  display: flex;
+  margin: 6px 0;
+}
+
+#heading-1 {
+  margin-top: 22px;
+}
+
+#heading-2 {
+  margin-bottom: 22px;
+}
+
+.heading h1 {
+  padding: 5px 12px;
+}
+
+#footer-heading-1 {
+  color: red;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#footer-heading-2 {
+  color: forestgreen;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#footer-heading-3 {
+  color: yellow;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#footer-heading-4 {
+  color: blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#footer-heading-5 {
+  font-family: cursive;
+  color: purple;
+}
+
+/* Links footer Starts Here */
+.down-footer {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.footer-para {
+  display: inline-block;
+  width: 30%;
+  margin: 8px auto;
+  padding: 7px 33px;
+}
+
+.footer-para b {
+  color: rgb(255, 0, 0);
+  font-family: monospace;
+  font-size: 19px;
+}
+
+
+.footer-para p {
+  color: red;
+  color: purple;
+  width: 151px;
+  margin: 17px 0;
+  padding: 4px 0;
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+
+.copy-right {
+  text-align: center;
+  font-family: cursive;
+  margin-top: 3px;
+  margin-top: 9px;
+}
+
+
+
+
+/* Styling for up Button */
+.up {
+  position: fixed;
+  bottom: 18px;
+  right: 22px;
+  width: 50px;
+  background-color: cyan;
+  height: 50px;
+  text-align: center;
+  border-radius: 11px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 11px 6px #6396c4;
+  transition: all 2s ease;
+  z-index: 100;
+
+}
+
+.up a {
+  color: red;
+  text-decoration: none;
+  margin: auto 2px;
+  font-weight: bold;
+  padding: 12px 18px;
+  font-size: 23px;
+}

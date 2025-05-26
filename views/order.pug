@@ -1,0 +1,194 @@
+extends base.pug
+block title 
+    title Place Your Order Now !! | We provide best services 
+block style 
+    style
+        include ../static/order.css
+        include ../static/base.css
+        
+block content 
+ 
+      
+  <main>
+      <section class="order-form">
+        <h1>Place Your Order</h1>
+        <p>Fill out the form below to order any of our IT services. We’ll get back to you shortly!</p>
+        <form action="/place_order" method="post">
+          <!-- Personal Information Section --> 
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+          </fieldset>
+
+          <!-- Service Selection Section -->
+          <!-- Service Selection -->
+          <fieldset>
+            <legend>Service Details</legend>
+            <div class="form-group">
+              <label for="service">Select a Service:</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="ai">AI Solutions</option>
+                <option value="web">Web Development</option>
+                <option value="software">Custom Software Development</option>
+                <option value="devops">DevOps</option>
+                <option value="app">App Development</option>
+                <option value="cybersecurity">Cybersecurity</option>
+                <option value="cloud">Cloud Services</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="subcategory">Select a Subcategory:</label>
+
+              <select id="subcategory" name="subcategory" required>
+                <option value="" disabled selected>Select a subcategory</option>
+                <!-- AI Solutions -->
+                <optgroup label="AI Solutions">
+                  <option value="ml">Machine Learning</option>
+                  <option value="chatbots">Chatbots</option>
+                  <option value="nlp">Natural Language Processing (NLP)</option>
+                  <option value="vision">Computer Vision</option>
+                  <option value="analytics">Predictive Analytics</option>
+                </optgroup>
+                <!-- Web Development -->
+                <optgroup label="Web Development">
+                  <option value="frontend">Frontend Development</option>
+                  <option value="backend">Backend Development</option>
+                  <option value="fullstack">Full Stack Development</option>
+                  <option value="ecommerce">E-commerce Development</option>
+                  <option value="cms">CMS Development</option>
+                </optgroup>
+                <!-- Custom Software -->
+                <optgroup label="Custom Software">
+                  <option value="enterprise">Enterprise Software</option>
+                  <option value="crm">CRM Solutions</option>
+                  <option value="erp">ERP Systems</option>
+                  <option value="desktop">Desktop Applications</option>
+                </optgroup>
+                <!-- DevOps -->
+                <optgroup label="DevOps">
+                  <option value="ci-cd">CI/CD Pipelines</option>
+                  <option value="containerization">Containerization (Docker, Kubernetes)</option>
+                  <option value="automation">Infrastructure Automation</option>
+                  <option value="monitoring">System Monitoring & Logging</option>
+                </optgroup>
+                <!-- App Development -->
+                <optgroup label="App Development">
+                  <option value="android">Android Apps</option>
+                  <option value="ios">iOS Apps</option>
+                  <option value="hybrid">Hybrid Apps</option>
+                  <option value="ui-ux">UI/UX Design</option>
+                </optgroup>
+                <!-- Cybersecurity -->
+                <optgroup label="Cybersecurity">
+                  <option value="network">Network Security</option>
+                  <option value="cloud">Cloud Security</option>
+                  <option value="risk">Risk Assessment</option>
+                  <option value="penetration">Penetration Testing</option>
+                  <option value="compliance">Compliance Auditing</option>
+                </optgroup>
+                <!-- Cloud Services -->
+                <optgroup label="Cloud Services">
+                  <option value="migration">Cloud Migration</option>
+                  <option value="storage">Cloud Storage Solutions</option>
+                  <option value="computing">Cloud Computing</option>
+                  <option value="backup">Backup & Disaster Recovery</option>
+                  <option value="management">Cloud Management</option>
+                </optgroup>
+              </select>
+
+            </div>
+          </fieldset>
+
+
+          <!-- Project Details Section -->
+          <fieldset>
+            <legend>Project Details</legend>
+            <label for="budget">Estimated Budget (in USD):</label>
+            <input type="number" id="budget" name="budget" required placeholder="Enter your budget">
+
+            <label for="deadline">Preferred Deadline:</label>
+            <input type="date" id="deadline" name="deadline" required>
+
+            <label for="details">Project Description:</label>
+            <textarea id="details" name="details" rows="5" required placeholder="Describe your project..."></textarea>
+          </fieldset>
+        
+          <!-- Submit Button -->
+          <button type="submit" class="btn-submit" onclick="sendEMail()">Submit Order</button>
+        </form>
+      </section>
+  </main>
+ 
+
+  <footer class="navclr-footclr">
+
+
+        <div class="down-footer">
+
+            <div id="f-one" class="footer-para">
+                <b>Cmpany</b>
+                <p>Contact</p>
+                <p>Career</p>
+                <p>Team</p> 
+                <p>Press release</p>
+                <p>In the media</p>
+                <p>Testimonials</p>
+                <p>IT-Hub non profit</p>
+            </div>
+
+            <div id="f-two" class="footer-para">
+                <b>Design services</b>
+                <p>Design contests</p>
+                <p>1-to-1 Projects</p>
+                <p>Find a designer</p>
+                <p>Dicover inspiration</p>
+                <p>Pricing</p>
+                <p>IT-Hub Design studio</p>
+                <p>IT-Hub Pro</p>
+            </div>
+
+            <div id="f-three" class="footer-para">
+                <b>Get a design</b>
+                <p>Logo design</p>
+                <p>Business card</p>
+                <p>Web page design</p>
+                <p>Brand guide</p>
+                <p>Packaging design</p>
+                <p>T-shirt design</p>
+                <p>Book cover design</p>
+                <p>Browse all categories</p>
+            </div>
+
+            <div id="f-four" class="footer-para">
+                <b>Resources</b>
+                <p>Become a designer</p>
+                <p>Blog</p>
+                <p>Design without borders</p>
+                <p>IT-Hub awards</p>
+                <p>Affiliates</p>
+                <p>Logo design</p>
+                <p>T-shirt design</p>
+                <p>Designer resources</p>
+                <p>Featured partners</p>
+                <p>Help</p>
+            </div>
+
+        </div>
+        <hr>
+        <p class="copy-right"> Copyright &copy; 2005-2024 | www.ITHub.edu.pk | All rights reserved </p>    
+  </footer>
+ 
+
+block script   
+  script(src="../static/sendMail.js")  
+  <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">(function(){emailjs.init({publicKey: "GfDFMqIJY4S4p1pCQ", });})();</script> 
