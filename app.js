@@ -35,7 +35,7 @@ app.get("/feedback", (req, res) => {
 app.get("/service", (req, res) => {
   res.status(200).render("service.pug");
 });
-app.get('/place_order', (req, res )=>{
+app.get('/place-order', (req, res )=>{
   res.status(200).render('order.pug')
 })
 
@@ -68,11 +68,11 @@ app.post("/feedback", (req, res) => {
   res.render("feedback.pug");
 }); 
 
-app.post("/place_order", (req,res) =>{
+app.post("/place-order", (req,res) =>{
   res.render("order.pug") 
 })
 
-app.get('/place_order', (req, res )=>{
+app.get('/place-order', (req, res )=>{
   res.status(200).render('order.pug')
 })
 

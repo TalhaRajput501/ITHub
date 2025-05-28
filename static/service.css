@@ -110,3 +110,16 @@ body {
     transform: scale(1.05);
     background: linear-gradient(135deg, #008394, #005f66);
 }
+/* Responsive layout starts here */
+
+@media screen and (max-width: 808px){
+    .order_now{
+        width: auto ;
+    }
+
+    .service-content img{
+        clip-path: unset;
+        border-radius: 23px;
+    }
+ 
+}

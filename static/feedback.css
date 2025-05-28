@@ -8,11 +8,12 @@
     opacity: 0.8;
     z-index: 1;
 }
- 
+
 
 form {
     display: flex;
     flex-direction: column;
+    /* display: 80vw; */
 }
 
 .form-heading {
@@ -37,13 +38,13 @@ form {
 .form-input {
     border: 1px solid gray;
     margin: 11px 0;
-    width: 593px; 
     font-size: 1rem;
     padding: 0.8rem; 
     border-radius: 6px; 
-    
+    width: 593px; 
+    width: 70vw;
 }
-
+ 
 .form-input:focus, .form-input-area:focus{
     outline: none;
     border: 1px solid #00bcd4;
@@ -51,15 +52,15 @@ form {
 }
 
 .form-btn {
-    width: 30%;
+    /* width: 30vw; */
     padding: 0.5rem 0.3rem;
+    padding: 0.5rem 1.8rem;
     background: linear-gradient(135deg, #00bcd4, #008394);
     color: #fff;
     font-size: 1.2rem;
     border: none;
     border-radius: 6px;
     margin: 23px auto;
-
 }
 
 .form-btn:hover {
@@ -67,7 +68,12 @@ form {
     transform: scale(1.05);
 }
 
-
+@media screen and (max-width: 480px){
+    .form-input {
+        width: 85vw;
+        /* width: 500px; */
+    }
+}
 /* It is for removing the some elements from contact form  */
 .up {
     display: none;

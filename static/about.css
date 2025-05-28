@@ -109,12 +109,14 @@ h2::after {
 .mission,
 .vision {
     flex: 1;
-    min-width: 300px;
+    /* min-width: 300px; */
     background: #fff;
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-top: 3px solid #00bcd4;
     transition: transform 0.3s ease;
+    
+    flex-direction: column;
 }
 
 .mission:hover,
@@ -189,6 +191,7 @@ h2::after {
 .stats {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding: 2rem 1rem;
     background: #fff; 
 }
@@ -196,12 +199,15 @@ h2::after {
 .stat-item {
     text-align: center;
     flex: 1;
-    max-width: 190px;
+    /* flex-basis: 50%; */
+    /* max-width: 190px; */
     padding: 1rem;
     background: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 12px;
+    width: auto;
 }
 
 .stat-item:hover {
@@ -230,4 +236,15 @@ h2::after {
 
 .question:hover {
     transform: translateY(-5px);
+}
+
+
+/* Responsive layout starts here */
+@media screen and (max-width: 450px){
+    .about-hero h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
 }

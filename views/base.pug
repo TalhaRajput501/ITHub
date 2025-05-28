@@ -1,67 +1,76 @@
 html 
     head 
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">(function(){emailjs.init({publicKey: "GfDFMqIJY4S4p1pCQ", });})();</script>
         <!-- <link rel="shortcut icon" href="../static/img/logo.png" type="image/x-icon"> -->
-    <link rel="icon" href="../static/img/logo.png"  type="image/jpg" sizes="50x50">
+    <link rel="icon" href="../static/img/favicon.png"  type="image/jpg" sizes="50x50">
     <!-- Set the tile of web page -->
     block title
         title IT Hub #{title}
 
     block style
-    
+        
     body 
     <!-- This is the navigation bar -->
-    <div class="main-head">
+        <div class="main-head">
 
-        <nav id="navigation" class="navclr-footclr">
-            <ul class="navbar">
-                
-                <img src="../static/img/logo.png" href="/home" alt="IT_HUB" class="nav-logo" > 
-
-
-                <li><a href="/home">Home</a></li>
-
-                
-                <button id="service-button"  onmouseleave="outbtn()">
+            <!-- Now this is side bar -->
+            <div class="side-bar">
+                <div class="side-bar-container">
+                    <img class="sideBar-back-img" src="../static/img/back.png" alt="">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">AboutUs</a></li>
                     <li><a href="/service">Services</a></li>
-                </button> 
+                    <li><a href="/feedback">Feedback</a></li>
+                </div>
+            </div>
 
-                <li><a href="/about">AboutUs</a></li>
+            <nav id="navigation" class="navclr-footclr">    
+                <ul class="navbar">
+                    
+                    <img src="../static/img/logo.png" href="/home" alt="IT-HUB" id="itHub-logo" class="nav-logo" >
+                    <img src="../static/img/hamburger-icon.png" href="/home" alt="☰" class="nav-logo hamburger-icon" >
+                    
+                    <li><a href="/home">Home</a></li>
+                    <button id="service-button"  onmouseleave="outbtn()">
+                        <li><a href="/service">Services</a></li>
+                    </button> 
+                    <li><a href="/about">AboutUs</a></li>
+                    <li><a href="/feedback">Feedback</a></li>
+                </ul>
+                //- This is for the order button on navigation bar
+                <a href="/place-order" class="order_button">Order Now</a> 
+            </nav>
 
-                <li><a href="/feedback">Feedback</a></li>
+            <!-- This is for the menu-bar with click the service button on navigation bar -->
             
-            </ul>
-            //- This is for the order button on navigation bar
-            <li class='order'><a href="/place_order" class="order_button">Order Now</a></li>
-        </nav>
+            <div id="menu" onmouseenter="entermenu()" onmouseleave="outmenu()">
+                <ul>
+                    
+                    <li><a href="/service#web_dev">Web Development</a></li>
+                    <li><a href="/service#app_dev">Mobile App Development</a></li>
+                    <li><a href="/service#ai_dev">Generative AI</a></li>
+                    <li><a href="/service#cyber">Cyber Security Solution</a></li>
+                    <li><a href="/service#devOps">DevOps</a></li>
+                    <li><a href="/service#cloud">Cloud Migration & Management</a></li>
+                    <li><a href="/service#custom_software">Custom Software Development</a></li>
+                </ul>
+            </div>
 
-        <!-- This is for the menu-bar with click the service button on navigation bar -->
-        
-        <div id="menu" onmouseenter="entermenu()" onmouseleave="outmenu()">
-            <ul>
-                
-                <li><a href="/service#web_dev">Web Development</a></li>
-                <li><a href="/service#app_dev">Mobile App Development</a></li>
-                <li><a href="/service#ai_dev">Generative AI</a></li>
-                <li><a href="/service#cyber">Cyber Security Solution</a></li>
-                <li><a href="/service#devOps">DevOps</a></li>
-                <li><a href="/service#cloud">Cloud Migration & Management</a></li>
-                <li><a href="/service#custom_software">Custom Software Development</a></li>
-            </ul>
         </div>
-
-    </div>
-        
 
     <!-- This is the floating button to go back on top -->
     <abbr title="Back to Top">
         <div class="up"><a href="#navigation">&uparrow;</a></div>
     </abbr>
 block content
-    
+
 block script
     <script src="../static/alert.js"></script>
+    <script src="../static/responsive.js"></script>
 
 
 
