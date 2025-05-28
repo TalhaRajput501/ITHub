@@ -13,7 +13,7 @@ block content
       <section class="order-form">
         <h1>Place Your Order</h1>
         <p>Fill out the form below to order any of our IT services. We’ll get back to you shortly!</p>
-        <form action="/place_order" method="post">
+        <form id="orderForm">
           <!-- Personal Information Section --> 
           <fieldset>
             <legend>Personal Information</legend>
@@ -35,13 +35,13 @@ block content
               <label for="service">Select a Service:</label>
               <select id="service" name="service" required>
                 <option value="" disabled selected>Select a service</option>
-                <option value="ai">AI Solutions</option>
-                <option value="web">Web Development</option>
-                <option value="software">Custom Software Development</option>
-                <option value="devops">DevOps</option>
-                <option value="app">App Development</option>
-                <option value="cybersecurity">Cybersecurity</option>
-                <option value="cloud">Cloud Services</option>
+                <option value="AI">AI Solutions</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Custom Software">Custom Software Development</option>
+                <option value="DevOps">DevOps</option>
+                <option value="App Development">App Development</option>
+                <option value="Cyber Security">Cyber Security</option>
+                <option value="Cloud Service">Cloud Services</option>
               </select>
             </div>
 
@@ -52,56 +52,56 @@ block content
                 <option value="" disabled selected>Select a subcategory</option>
                 <!-- AI Solutions -->
                 <optgroup label="AI Solutions">
-                  <option value="ml">Machine Learning</option>
-                  <option value="chatbots">Chatbots</option>
-                  <option value="nlp">Natural Language Processing (NLP)</option>
-                  <option value="vision">Computer Vision</option>
-                  <option value="analytics">Predictive Analytics</option>
+                  <option value="Machine Learning">Machine Learning</option>
+                  <option value="Chatbots">Chatbots</option>
+                  <option value="Natural Language Processing">Natural Language Processing</option>
+                  <option value="Computer Vision">Computer Vision</option>
+                  <option value="Predictive Analytics">Predictive Analytics</option>
                 </optgroup>
                 <!-- Web Development -->
                 <optgroup label="Web Development">
-                  <option value="frontend">Frontend Development</option>
-                  <option value="backend">Backend Development</option>
-                  <option value="fullstack">Full Stack Development</option>
-                  <option value="ecommerce">E-commerce Development</option>
-                  <option value="cms">CMS Development</option>
+                  <option value="Frontend Development">Frontend Development</option>
+                  <option value="Backend Development">Backend Development</option>
+                  <option value="Fullstack Project">Full Stack Development</option>
+                  <option value="E-commerce">E-commerce Development</option>
+                  <option value="Content Managment System">Content Managment System</option>
                 </optgroup>
                 <!-- Custom Software -->
                 <optgroup label="Custom Software">
                   <option value="enterprise">Enterprise Software</option>
-                  <option value="crm">CRM Solutions</option>
-                  <option value="erp">ERP Systems</option>
+                  <option value="Customer Relationship Managment">Customer Relation Solutions</option>
+                  <option value="Enterprise Resource Planning">Enterprise Resource Planning</option>
                   <option value="desktop">Desktop Applications</option>
                 </optgroup>
                 <!-- DevOps -->
                 <optgroup label="DevOps">
-                  <option value="ci-cd">CI/CD Pipelines</option>
-                  <option value="containerization">Containerization (Docker, Kubernetes)</option>
-                  <option value="automation">Infrastructure Automation</option>
-                  <option value="monitoring">System Monitoring & Logging</option>
+                  <option value="CI/CD Piplines">CI/CD Pipelines</option>
+                  <option value="Containerization (Docker, Kubernetes)">Containerization Docker</option>
+                  <option value="Automation">Infrastructure Automation</option>
+                  <option value="System Monitoring">System Monitoring & Logging</option>
                 </optgroup>
                 <!-- App Development -->
                 <optgroup label="App Development">
-                  <option value="android">Android Apps</option>
-                  <option value="ios">iOS Apps</option>
-                  <option value="hybrid">Hybrid Apps</option>
-                  <option value="ui-ux">UI/UX Design</option>
+                  <option value="Android App">Android Apps</option>
+                  <option value="iOS App">iOS Apps</option>
+                  <option value="Hybrid App">Hybrid Apps</option>
+                  <option value="UI/UX Design">UI/UX Design</option>
                 </optgroup>
                 <!-- Cybersecurity -->
                 <optgroup label="Cybersecurity">
-                  <option value="network">Network Security</option>
-                  <option value="cloud">Cloud Security</option>
-                  <option value="risk">Risk Assessment</option>
-                  <option value="penetration">Penetration Testing</option>
-                  <option value="compliance">Compliance Auditing</option>
+                  <option value="Network Security">Network Security</option>
+                  <option value="Cloud Security">Cloud Security</option>
+                  <option value="Risk Assessment">Risk Assessment</option>
+                  <option value="Penetration Testing">Penetration Testing</option>
+                  <option value="Compliance Auditing">Compliance Auditing</option>
                 </optgroup>
                 <!-- Cloud Services -->
                 <optgroup label="Cloud Services">
-                  <option value="migration">Cloud Migration</option>
-                  <option value="storage">Cloud Storage Solutions</option>
-                  <option value="computing">Cloud Computing</option>
-                  <option value="backup">Backup & Disaster Recovery</option>
-                  <option value="management">Cloud Management</option>
+                  <option value="Cloud Migration">Cloud Migration</option>
+                  <option value="Cloud Storage Solutions">Cloud Storage Solutions</option>
+                  <option value="Cloud Computing">Cloud Computing</option>
+                  <option value="Backup & Disaster Recovery">Backup & Disaster Recovery</option>
+                  <option value="Cloud Management">Cloud Management</option>
                 </optgroup>
               </select>
 
@@ -123,7 +123,7 @@ block content
           </fieldset>
         
           <!-- Submit Button -->
-          <button type="submit" class="btn-submit" onclick="sendEMail()">Submit Order</button>
+          <button type="submit" class="btn-submit" >Submit Order</button>
         </form>
       </section>
   </main>
@@ -168,9 +168,10 @@ block content
         </div>
     </footer>
  
-
+ 
 block script   
   script(src="../static/sendMail.js")  
   script(src="../static/responsive.js")  
+  script(src="../static/alert.js")  
   <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">(function(){emailjs.init({publicKey: "GfDFMqIJY4S4p1pCQ", });})();</script> 
