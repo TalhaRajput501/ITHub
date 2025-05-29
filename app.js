@@ -42,7 +42,8 @@ app.get('/place-order', (req, res )=>{
 
 
 // Setting up connection with mongodb
-const URI = "mongodb://localhost:27017/It_Hub";
+// const URI = "mongodb://localhost:27017/It_Hub";
+const URI = "mongodb+srv://talhaashfaq4197:talhamongodbatlas@cluster0.252ib.mongodb.net/IT_HUB?retryWrites=true&w=majority&appName=Cluster0";
 mongoose
   .connect(URI)
   .then(() => {
@@ -58,13 +59,12 @@ const Schema = new mongoose.Schema({
   phone: String,
   region: String,
   concern: String,
-});
+}, { collection: 'itHub_feedback' });
 
 const User = mongoose.model("contact", Schema);
 
 app.post("/feedback", (req, res) => {
   let data = new User(req.body);
-  
   data.save(); 
   res.render("feedback.pug");
 }); 
