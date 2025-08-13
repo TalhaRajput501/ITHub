@@ -1,8 +1,11 @@
+const dotenv = require('dotenv')
 
+dotenv.config()
+const cors = require('cors')
 // Setting up an app using EXPRESS
 const express = require("express");
 const app = express();
-const host = "127.0.0.1";
+const host = "localhost";
 const port = 80;
 // Other Modules
 const mongoose = require("mongoose");
@@ -12,8 +15,10 @@ const { title } = require("process");
 // EXPRESS  related Stuff
 app.use("/static", express.static("static"));
 app.use(express.urlencoded());
+// CORS 
+app.use(cors())
 
-app.set("views", path.join(__dirname  , "views"));
+app.set("views", path.join(__dirname, "views"));``
 app.set("view engine", "pug");
 
 // END POINTS of my App
@@ -36,23 +41,14 @@ app.get("/feedback", (req, res) => {
 app.get("/service", (req, res) => {
   res.status(200).render("service.pug");
 });
-app.get('/place-order', (req, res )=>{
+
+app.get('/place-order', (req, res) => {
   res.status(200).render('order.pug')
 })
 
 
-// Setting up connection with mongodb
-// const URI = "mongodb://localhost:27017/It_Hub";
-const URI = "mongodb+srv://talhaashfaq4197:talhamongodbatlas@cluster0.252ib.mongodb.net/IT_HUB?retryWrites=true&w=majority&appName=Cluster0";
-mongoose
-  .connect(URI)
-  .then(() => {
-    console.log("Connected with MongoDB successfuly");
-  })
-  .catch((err) => {
-    console.error(err);
-  });
-  
+
+
 const Schema = new mongoose.Schema({
   name: String,
   email: String,
@@ -65,21 +61,41 @@ const User = mongoose.model("contact", Schema);
 
 app.post("/feedback", (req, res) => {
   let data = new User(req.body);
-  data.save(); 
+  data.save();
   res.render("feedback.pug");
-}); 
+});
 
-app.post("/place-order", (req,res) =>{
-  res.render("order.pug") 
+app.post("/place-order", (req, res) => {
+  res.render("order.pug")
 })
 
-app.get('/place-order', (req, res )=>{
+app.get('/place-order', (req, res) => {
   res.status(200).render('order.pug')
 })
 
-// Listining app on specified Port
-app.listen(port, () => {
-  console.log(
-    `Your app is started at http://${host}:${port}. Just click it to see your app on browser !!!`
-  );
-});
+app.get('/config', (req, res) => {
+  res.status(200).json({
+    emailJsServiceId : process.env.EMAILJS_SERVICE_ID,
+    emailJsTempelateId : process.env.EMAILJS_TEMPLATE_ID
+  })
+})  
+
+// Setting up connection with mongodb
+// const URI = "mongodb://localhost:27017/It_Hub";
+const URI = process.env.MONGODB_URI;
+mongoose
+  .connect(URI)
+  .then(() => {
+    console.log("Connected with MongoDB successfuly");
+
+    // Listining app on specified Port
+    app.listen(port, () => {
+      console.log(
+        `Your app is started at http://${host}:${port}. Just click it to see your app on browser !!!`
+      );
+    });
+
+  })
+  .catch((err) => {
+    console.error(err);
+  });
